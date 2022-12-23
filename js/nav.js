@@ -28,8 +28,7 @@ function scrollToTop(){
     document.getElementById("name-container").setAttribute("style","display:none");
     btf.scrollToDest(0, 500);
 }
-document.getElementById("page-name").innerText = document.title.split(" |")[0];
-
+document.getElementById("凯跶韶").innerText = document.title.split(" |")[0];
 
 
 
