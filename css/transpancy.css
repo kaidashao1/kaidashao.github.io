@@ -442,11 +442,11 @@ button.toast-close-button {
 #aside-content>.card-widget.card-info {
   /*换成自己图片的地址*/
   background: linear-gradient(-45deg,
-  #fff4df,
-  #ffe8e1,
-  #edfeff,
-  #dfdfff,
-  #ffdffc);
+  #feeccad6,
+  #fdd5c9cc,
+  #d3fcfdd8,
+  #d1d1feda,
+  #ffcefae1);
 box-shadow: 0 0 5px rgb(66, 68, 68);
 position: relative;
 background-size: 400% 400%;
@@ -506,9 +506,9 @@ animation: Gradient 10s ease infinite !important;
 
 
 :root {
-  --trans-light: rgba(255, 255, 255, 0.88);
+  --trans-light: rgba(255, 255, 255, 0.766);
   --trans-dark: rgba(25, 25, 25, 0.88);
-  --border-style: 1px solid rgb(169, 169, 169);
+  --border-style: 1px solid rgba(169, 169, 169, 0.829);
   --backdrop-filter: blur(5px) saturate(150%);
 }
 
@@ -595,7 +595,7 @@ div#archive {
 
 /*文章页面*/
 .layout>#post {
-	background: rgba(255, 255, 255, .8);
+	background: rgba(255, 255, 255, 0.832);
 }
 
 /*分类页面*/
