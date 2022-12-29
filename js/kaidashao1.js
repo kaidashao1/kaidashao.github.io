@@ -19,4 +19,8 @@ b=Math.round(g);
 1==String(b).length&&(b="0"+b);
 let c="";
 c=s<18&&s>=9?
-`<div style="font-size:13px;font-weight:normal"><br>你与他已相遇 ${v} 天<i id="heartbeat" class='fas fa-heartbeat'></i><br>本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 </i> <br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${a} 个天文单位 🚀</div>`:`<img class='boardsign' src='https://sourcebucket.s3.ladydaily.com/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 </i><br>你与他已相遇 ${v} 天<i id="heartbeat" class='fas fa-heartbeat'></i><br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${a} 个天文单位 🚀</div>`,document.getElementById("workboard")&&(document.getElementById("workboard").innerHTML=c)}setInterval((()=>{createtime()}),1e3);
+`<div style="font-size:13px;font-weight:normal">
+<br>你与他已相遇 ${v} 天<i class="fa-fw fas fa-heartbeat card-announcement-animation cc_pointer">
+</i>本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 </i> 
+<br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${a} 个天文单位 🚀</div>`
+:`<br> <div style="font-size:13px;font-weight:normal"><br>你与他已相遇 ${v} 天<i class="fa-fw fas fa-heartbeat card-announcement-animation cc_pointer"></i><br>本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 </i><br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${a} 个天文单位 🚀</div>`,document.getElementById("workboard")&&(document.getElementById("workboard").innerHTML=c)}setInterval((()=>{createtime()}),1e3);
