@@ -2,7 +2,7 @@ var now=new Date;function createtime()
 {now.setTime(now.getTime()+1e3);var e=new Date("08/01/2022 00:00:00"),
 t=Math.trunc(234e8+(now-e)/1e3*17),
 a=(t/1496e5).toFixed(6),
-o=new Date("12/31/2022 00:00:00"),
+o=new Date("1/1/2023 00:00:00"),
 n=(now-o)/1e3/60/60/24,
 r=Math.floor(n),
 i=(now-o)/1e3/60/60-24*r,
@@ -20,7 +20,7 @@ b=Math.round(g);
 let c="";
 c=s<18&&s>=9?
 `<div style="font-size:13px;font-weight:normal">
-<br>你与他已相遇 ${v} 天<i class="fa-fw fas fa-heartbeat card-announcement-animation cc_pointer">
-</i><br>本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 </i> 
-<br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${a} 个天文单位 🚀</div>`
+你与他已相遇 ${v} 天<i class="fa-fw fas fa-heartbeat card-announcement-animation cc_pointer">
+</i>本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 </i> 
+旅行者 1 号当前距离地球 ${t} 千米，约为 ${a} 个天文单位 🚀</div>`
 :`<br> <div style="font-size:13px;font-weight:normal"><br>你与他已相遇 ${v} 天<i class="fa-fw fas fa-heartbeat card-announcement-animation cc_pointer"></i><br>本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 </i><br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${a} 个天文单位 🚀</div>`,document.getElementById("workboard")&&(document.getElementById("workboard").innerHTML=c)}setInterval((()=>{createtime()}),1e3);

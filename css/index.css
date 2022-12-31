@@ -4239,7 +4239,7 @@ h1.page-title + .tag-cloud-list {
   position: relative;
   margin: 40px 0 10px;
   padding: 10px 16px;
-  border: 1px solid var(--light-grey);
+  border: 0px solid var(--light-grey);
   -webkit-transition: box-shadow 0.3s ease-in-out;
   -moz-transition: box-shadow 0.3s ease-in-out;
   -o-transition: box-shadow 0.3s ease-in-out;
@@ -4247,7 +4247,7 @@ h1.page-title + .tag-cloud-list {
   transition: box-shadow 0.3s ease-in-out;
   overflow: hidden;
   border-radius: 12px !important;
-  background-color: #ddf6f8;
+  background-color: #fff;
 }
 #post .post-copyright:before {
   background: var(--heo-post-blockquote-bg);
