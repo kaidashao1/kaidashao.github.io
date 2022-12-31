@@ -1,7 +1,7 @@
 http://example.com/posts/1.html
 http://example.com/caidan/index.html
-http://example.com/about/index.html
 http://example.com/album/index.html
+http://example.com/about/index.html
 http://example.com/album/Selected%20pictures.html
 http://example.com/movies/index.html
 http://example.com/music/index.html
