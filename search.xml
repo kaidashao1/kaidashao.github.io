@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>一些常用指令</title>
+    <url>//1/</url>
+    <content><![CDATA[<h3 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page xxxxx</span><br></pre></td></tr></table></figure>
+<h3 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo cl</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成页面"><a href="#生成页面" class="headerlink" title="生成页面"></a>生成页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="追番数据"><a href="#追番数据" class="headerlink" title="追番数据"></a>追番数据</h3><h4 id="更新追番数据"><a href="#更新追番数据" class="headerlink" title="更新追番数据"></a>更新追番数据</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo bangumis -u</span><br></pre></td></tr></table></figure>
+<h4 id="删除追番数据"><a href="#删除追番数据" class="headerlink" title="删除追番数据"></a>删除追番数据</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo bangumis -d</span><br></pre></td></tr></table></figure>
+<p>项目地址：<a href="https://github.com/mmdjiji/hexo-bangumis">https://github.com/mmdjiji/hexo-bangumis</a></p>
+<h3 id="bilibili卡片"><a href="#bilibili卡片" class="headerlink" title="bilibili卡片"></a>bilibili卡片</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% bilicard your_video_id %&#125;</span><br></pre></td></tr></table></figure>
+<p>项目地址：<a href="https://github.com/MaxChang3/hexo-bilibili-card">https://github.com/MaxChang3/hexo-bilibili-card</a></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>指令</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建日记</title>
+    <url>//2/</url>
+    <content><![CDATA[<h2 id="追番工具"><a href="#追番工具" class="headerlink" title="追番工具"></a>追番工具</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-bangumis --save</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>将下面的配置写入 站点 的配置文件<code>_config.yml</code>中:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bangumis:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span>              <span class="comment"># 是否启用</span></span><br><span class="line">  path: bangumis/index.html <span class="comment"># 生成追番页面的路径</span></span><br><span class="line">  show: 1                   <span class="comment"># 想看，在看，看完</span></span><br><span class="line">  title: <span class="string">&#x27;追番列表&#x27;</span>          <span class="comment"># 标题</span></span><br><span class="line">  quote: <span class="string">&#x27;生命不息，追番不止&#x27;</span> <span class="comment"># 格言</span></span><br><span class="line">  color_meta: <span class="string">&quot;#555&quot;</span>        <span class="comment"># 追番项元数据的颜色</span></span><br><span class="line">  color_summary: <span class="string">&quot;#555&quot;</span>     <span class="comment"># 追番项简介的颜色</span></span><br><span class="line">  bgmtv_uid: mmdjiji        <span class="comment"># bgm.tv的uid</span></span><br><span class="line">  download_image: <span class="literal">true</span>      <span class="comment"># 下载图片并使用本地图片，否则使用bgm.tv提供的网络图源</span></span><br><span class="line">  image_level: c            <span class="comment"># 图片高清等级 (l, c, m, s, g)</span></span><br><span class="line">  lazyload: <span class="literal">true</span>            <span class="comment"># 是否开启懒加载</span></span><br><span class="line">  margin: 20px              <span class="comment"># 封面图的偏移量微调</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>更新追番数据:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo bangumis -u</span><br></pre></td></tr></table></figure>
+<p>删除追番数据:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo bangumis -d</span><br></pre></td></tr></table></figure>
+<h3 id="获取-bgm-tv-的-uid"><a href="#获取-bgm-tv-的-uid" class="headerlink" title="获取 bgm.tv 的 uid"></a>获取 bgm.tv 的 uid</h3><p>登录 bgm.tv 后打开控制台（快捷键 Ctrl + Shift + J），输入 CHOBITS_UID 后按回车，得到的数字就是 uid 啦~</p>
+<p>项目地址：<a href="https://github.com/mmdjiji/hexo-bangumis">https://github.com/mmdjiji/hexo-bangumis</a></p>
+<h2 id="随机生成页面（hexo-generator-random）"><a href="#随机生成页面（hexo-generator-random）" class="headerlink" title="随机生成页面（hexo-generator-random）"></a>随机生成页面（hexo-generator-random）</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><h4 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h4><p>本插件用到的依赖如下：<br>1.minimatch 2.path 3.fs 4.object-assign<br>上面四个依赖，前三个一般hexo init之后都会有，但是第四个一般都没有（我自己测试的时候是没有的。 所以你需要先安装一下object-assign</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install object-assign</span><br></pre></td></tr></table></figure>
+<h4 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h4><p>把本仓库的内容<code>git clone</code>或<code>download</code>到本地，然后把保存到本地的文件夹放在<code>../blog/node_modules</code>文件夹中。然后，在博客根目录下的<code>package.json</code>里面的<code>dependencies</code>中加入这一行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;hexo-generator-random&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span></span><br></pre></td></tr></table></figure>
+<p>注意：如果你是加到最后一行的，在这个上面的一行要加上逗号，这是完成后的效果。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;hexo&quot;</span>: <span class="string">&quot;^4.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-generator-index&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-generator-random&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;^1.1.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;hexo-server&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;object-assign&quot;</span>: <span class="string">&quot;^4.1.1&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="npm安装"><a href="#npm安装" class="headerlink" title="npm安装"></a>npm安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-random --save</span><br></pre></td></tr></table></figure>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>在博客根目录下的<code>_config.yml</code>里面的<code>url</code>需要改成<code>/</code>或者你的域名</p>
+<h3 id="已知Bug"><a href="#已知Bug" class="headerlink" title="已知Bug"></a>已知Bug</h3><p>不同的主题可能会有其他页面混进随机文章</p>
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><p>上面的配置如果都是正确的话，当你hexo g之后，在public文件夹下会生成一个random.html。 直接访问yoursite&#x2F;random.html就可以感受这个随机文章了。 你甚至可以直接在菜单栏里面加上一个菜单，path写上<code>/random.html/</code>即可。</p>
+<p>项目地址：<a href="https://github.com/Drew233/hexo-generator-random">https://github.com/Drew233/hexo-generator-random</a></p>
+<h2 id="哔哩哔哩链接卡片-hexo-bilibili-card"><a href="#哔哩哔哩链接卡片-hexo-bilibili-card" class="headerlink" title="哔哩哔哩链接卡片(hexo-bilibili-card)"></a>哔哩哔哩链接卡片(hexo-bilibili-card)</h2><p>A hexo plugin insert a bilibili card into your page or article, some of css code is copy from bilibili.<br>一个Hexo插件，在你的文章中插入b站的视频卡片，样式模仿和借鉴自b站。</p>
+<h3 id="Install-安装"><a href="#Install-安装" class="headerlink" title="Install 安装"></a>Install 安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-bilibili-card</span><br></pre></td></tr></table></figure>
+<h3 id="Preview-预览"><a href="#Preview-预览" class="headerlink" title="Preview 预览"></a>Preview 预览</h3><p>You can click <a href="https://zhangmaimai.com/2021/02/05/some-tests/" rel="nofollow"> here</a>to see the preview website. 点击<a href="https://zhangmaimai.com/2021/02/05/some-tests/" rel="nofollow">这里</a>看预览哦~</p>
+<h3 id="Usage-使用"><a href="#Usage-使用" class="headerlink" title="Usage 使用"></a>Usage 使用</h3><p>In your markdown file: 在你的markdown文件中插入以下片段</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% bilicard your_video_id %&#125;</span><br></pre></td></tr></table></figure>
+<p><code>your_video_id</code>:is the avid or bvid in Bilibili.<br><code>your_video_id</code>:是b站的bv号或av号。<br>then you will get the card in your page.<br>然后你就可以看见文章中的卡片了。</p>
+<p>项目地址：<a href="https://github.com/MaxChang3/hexo-bilibili-card">https://github.com/MaxChang3/hexo-bilibili-card</a></p>
+<h2 id="font-6-图标引入"><a href="#font-6-图标引入" class="headerlink" title="font 6 图标引入"></a>font 6 图标引入</h2><p>在主题配置文件<code>_config.async.yml</code>中的<code>assets</code>→<code>icons</code>→<code>js</code>内加入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://kit.fontawesome.com/yourkeys.js</span><br></pre></td></tr></table></figure>
+<p>如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">assets:</span><br><span class="line">  <span class="comment"># 主題內部 js 的 cdn 配置</span></span><br><span class="line">  internal_provider: <span class="built_in">local</span></span><br><span class="line">  <span class="comment"># 第三方 js 的 cdn 配置</span></span><br><span class="line">  third_party_provider: unpkg</span><br><span class="line">  <span class="comment"># 主题使用到的插件</span></span><br><span class="line">  plugin:</span><br><span class="line">    hexo_theme_async:</span><br><span class="line">      rowcss:</span><br><span class="line">      typing: </span><br><span class="line">      search:</span><br><span class="line">      main:</span><br><span class="line">  <span class="comment"># 图标配置</span></span><br><span class="line">  icons: </span><br><span class="line">    <span class="built_in">type</span>:</span><br><span class="line">    css: css/plugins/font-awesome.min.css</span><br><span class="line">    js: https://kit.fontawesome.com/yourkeys.js  </span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>日记</tag>
+        <tag>备份</tag>
+      </tags>
+  </entry>
+</search>
